@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gym Website Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+        }
+
+        .popup-content {
+            position: relative;
+            margin: 15% auto;
+            padding: 20px;
+            background: #fff;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        /* Close button styles */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Styles for the search section */
+        .search-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-section input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-section button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Arrow button styles */
+        .arrow-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .arrow-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href=""> MY FITNESS <span>CLUB</span></a>
+            </div>
+            <a href="javascript:void(0)" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="bmr.html">BMR</a></li>
+                    <li><a href="enroll.html">BOOK MY TRAINER</a></li>
+                    <li><a href="user.html">User Login</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Home -->
+    <section class="home wow flash" id="home">
+        <div class="container">
+            <h1 class="wow slideInLeft" data-wow-delay="1s">It's <span>gym</span> time. Let's go</h1>
+            <h1 class="wow slideInRight" data-wow-delay="1s">We are ready to <span>fit you</span></h1>
+            <h1 class="wow slideInRight" data-wow-delay="1s">Find Your <span> Perfect Trainer</span></h1>
+        </div>
+        <!-- go down -->
+        <a href="about.html" class="go-down">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </a>
+        <!-- go down -->
+    </section>
+    <!-- End Home -->
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <h2>FIND YOUR PERFECT TRAINER</h2>
+        <input type="text" placeholder="Search for trainers..." aria-label="Search for trainers">
+        <button onclick="window.location.href='trainers data.html'">Search</button>
+        <!-- Arrow Button -->
+        <a href="classes.html" class="arrow-button">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> Go to Classes
+        </a>
+    </section>
+    <!-- End Search Section -->
+
+    <!-- Start Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="content">
+                <div class="box form wow slideInLeft">
+                    <form>
+                        <input type="text" placeholder="Enter Name">
+                        <input type="text" placeholder="Enter Email">
+                        <input type="text" placeholder="Enter Mobile">
+                        <textarea placeholder="Enter Message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="box text wow slideInRight">
+                    <h2>Get Connected with Trainer</h2>
+                    <p class="title-p">BE FREE TO ASK YOUR ANY QUERIES 
+                        ENHANCE YOURSELF TO ACHIEVE YOUR GOAL
+                        WE ARE THERE FOR YOU 24*7
+                    </p>
+                    <div class="info">
+                        <ul>
+                            <li><span class="fa fa-map-marker"></span>MY FITNESS CLUB KALYAN WEST </li>
+                            <li><span class="fa fa-phone"></span> +91 8451828370</li>
+                            <li><span class="fa fa-envelope"></span> info@gym.com</li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <a href=""><span class="fa fa-facebook"></span></a>
+                        <a href="https://www.instagram.com/r_a_h_u_l___27?igsh=eHZ3bXl1M3ZzOTY="><span class="fa fa-instagram"></span></a>
+                        <a href=""><span class="fa fa-youtube-play"></span></a>
+                    </div>
+
+                    <div class="copy">
+                        Powered By &copy; RAHUL SINGH
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Popup Contact Section -->
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <section class="contact">
+                <div class="container">
+                    <div class="content">
+                        <div class="box form">
+                            <form action="https://formspree.io/f/mzzbzybr" method="POST" class="wow slideInUp">
+                                <input type="text" name="name" placeholder="Enter Name" required>
+                                <input type="email" name="email" placeholder="Enter Email" required>
+                                <input type="text" name="mobile" placeholder="Enter Mobile" required>
+                                <textarea name="message" placeholder="Enter Message" required></textarea>
+                                <button type="submit">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="box text">
+                            <h2>Get Connected with Trainer</h2>
+                            <p class="title-p">BE FREE TO ASK YOUR ANY QUERIES 
+                                ENHANCE YOURSELF TO ACHIEVE YOUR GOAL
+                                WE ARE THERE FOR YOU 24*7
+                            </p>
+                            <div class="info">
+                                <ul>
+                                    <li><span class="fa fa-map-marker"></span>MY FITNESS CLUB KALYAN WEST </li>
+                                    <li><span class="fa fa-phone"></span> +91 8451828370</li>
+                                    <li><span class="fa fa-envelope"></span> info@gym.com</li>
+                                </ul>
+                            </div>
+                            <div class="social">
+                                <a href=""><span class="fa fa-facebook"></span></a>
+                                <a href="https://www.instagram.com/r_a_h_u_l___27?igsh=eHZ3bXl1M3ZzOTY="><span class="fa fa-instagram"></span></a>
+                                <a href=""><span class="fa fa-youtube-play"></span></a>
+                            </div>
+
+                            <div class="copy">
+                                Powered By &copy; RAHUL SINGH
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ham-burger, .nav ul li a").click(function() {
+                $(".nav").toggleClass("open");
+                $(".ham-burger").toggleClass("active");
+            });
+
+            $(".accordian-container").click(function() {
+                $(".accordian-container").children(".body").slideUp();
+                $(".accordian-container").removeClass("active");
+                $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up");
+                $(this).children(".body").slideDown();
+                $(this).addClass("active");
+                $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down");
+            });
+
+            $(".nav ul li a, .go-down").click(function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash; 
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+
+                    // add active class in navigation
+                    $(".nav ul li a").removeClass("active");
+                    $(this).addClass("active");
+                }
+            });
+
+            // Automatically open the popup when the page loads
+            var popup = document.getElementById("contactPopup");
+            var span = document.getElementById("closePopup");
+
+            // Open the popup automatically
+            popup.style.display = "block";
+
+            // Close the popup
+            span.onclick = function() {
+                popup.style.display = "none";
+            };
+
+            // Close the popup if user clicks outside of it
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            };
+        });
+
+        // WOW.js initialization
+        new WOW({
+            animateClass: 'animated',
+            offset: 0
+        }).init();
+    </script>
+</body>
+</html>

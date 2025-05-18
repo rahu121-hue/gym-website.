@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Website Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    .wow:first-child {
+      visibility: hidden;
+    }
+    .exit-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e02828;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+ 
+ <!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href=""> MY FITNESS <span>CLUB</span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="index.html">Home</a></li>
+ 	 			<li><a href="about.html">About</a></li>
+ 	 			<li><a href="service.html">Services</a></li>
+ 	 			<li><a href="classes.html">Classes</a></li>
+ 	 			<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+ 	 			<li><a href="contact.html">Contact</a></li>
+          <li><a href="bmr.html">BMR</a></li>
+          <li><a href="user.html">User Login</a></li>
+          <li><a href="admin.html">Admin Login</a></li>
+
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+
+  <!-- Start Home -->
+  <section class="home wow flash" id="home">
+  	 <div class="container">
+  	 	  <h1>DETAILS ABOUT STRETCHINGS</h1>
+             <h3 style="color: rgb(225, 40, 40);">Benefits of stretching:</h3>
+
+             <h5 style="color: white;">- <strong style="color: rgb(225, 50, 50);">Improved Flexibility</strong>: Regular stretching increases your range of motion, making everyday activities easier.</h5>
+             <h5 style="color: white;">- <strong style="color: rgb(225, 50, 50);">Reduced Injury Risk</strong>: Prepares muscles for exercise, reducing the likelihood of strains and sprains.</h5>
+             <h5 style="color: white;">- <strong style="color: rgb(225, 50, 50);">Enhanced Performance</strong>: Improves flexibility and range of motion, boosting overall workout performance.</h5>
+             <h5 style="color: white;">- <strong style="color: rgb(225, 50, 50);">Better Posture</strong>: Corrects muscle imbalances and improves posture.</h5>
+             <h5 style="color: white;">- <strong style="color: rgb(225, 50, 50);">Relaxation and Stress Relief</strong>: Promotes relaxation and reduces stress.</h5>
+  	 </div>
+  	  <!-- go down -->
+  	      <a href="about.html" class="go-down">
+  	      	  <i class="fa fa-angle-down" aria-hidden="true"></i>
+  	      </a>
+  	  <!-- go down -->
+
+  </section>
+  <!-- End Home --> 
+
+  <!-- Exit Button -->
+  <button class="exit-button" onclick="goToServicePage()">BACK</button>
+
+  <script>
+    function goToServicePage() {
+      window.location.href = 'classes.html';
+    }
+  </script>
+  
+</body>
+</html>

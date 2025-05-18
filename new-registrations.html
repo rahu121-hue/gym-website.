@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registrations - My Fitness Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .approve-button {
+            background-color: #28a745; /* Green for approve */
+        }
+        .approve-button:hover {
+            background-color: #218838;
+        }
+        .reject-button {
+            background-color: #dc3545; /* Red for reject */
+        }
+        .reject-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <script>
+        function approveRegistration(id) {
+            alert("Registration with ID: " + id + " approved.");
+            // Code to handle approval goes here
+        }
+
+        function rejectRegistration(id) {
+            if (confirm("Are you sure you want to reject registration with ID: " + id + "?")) {
+                alert("Registration with ID: " + id + " rejected.");
+                // Code to handle rejection goes here
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>New Registrations</h1>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>RIYA SINGH</td>
+                    <td>riya@email.com</td>
+                    <td>
+                        <button class="button approve-button" onclick="approveRegistration(1)">Approve</button>
+                        <button class="button reject-button" onclick="rejectRegistration(1)">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>RAVI PRASAD</td>
+                    <td>raviprasad@email.com</td>
+                    <td>
+                        <button class="button approve-button" onclick="approveRegistration(2)">Approve</button>
+                        <button class="button reject-button" onclick="rejectRegistration(2)">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SHWETA ASWARMOL</td>
+                    <td>shweta@gmail.com</td>
+                    <td>
+                        <button class="button approve-button" onclick="approveRegistration(3)">Approve</button>
+                        <button class="button reject-button" onclick="rejectRegistration(3)">Reject</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button" onclick="alert('Functionality to add new registrations not implemented yet.')">Add New Registration</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Website Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    .wow:first-child {
+      visibility: hidden;
+    }
+    .exit-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e02828;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  
+</head>
+<body>
+ 
+ <!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href=""> MY FITNESS <span>CLUB</span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="index.html">Home</a></li>
+ 	 			<li><a href="about.html">About</a></li>
+ 	 			<li><a href="service.html">Services</a></li>
+ 	 			<li><a href="classes.html">Classes</a></li>
+ 	 			<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+ 	 			<li><a href="contact.html">Contact</a></li>
+          <li><a href="bmr.html">BMR</a></li>
+          <li><a href="user.html">User Login</a></li>
+          <li><a href="admin.html">Admin Login</a></li>
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+ <section class="home wow flash" id="home">
+    <div class="container">
+          <h3 style="color: white;">DETAILS ABOUT STRETCHINGS</h3>
+ <h1>Strength Training Classes</h1>
+
+    <div class="class-type">
+          
+        <h2 style="color: rgb(206, 29, 29);">Free Weights</h2>
+        <p style="color: white;">Exercises with dumbbells, barbells, and kettlebells to build muscle mass and strength.</p>
+    </div>
+
+    <div class="class-type">
+        <h2 style="color: rgb(206, 29, 29);">Bodyweight Training</h2>
+        <p style="color: white;">Uses your own body weight (e.g., push-ups, squats) for functional strength and endurance.</p>
+    </div>
+
+    <div class="class-type">
+        <h2 style="color: rgb(206, 29, 29);">Resistance Bands</h2>
+        <p style="color: white;">Employs bands to add resistance, improving muscle tone and flexibility.</p>
+    </div>
+    <a href="about.html" class="go-down">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+  </a>
+<!-- go down -->
+
+</section>
+<!-- End Home -->
+ 
+  <!-- Exit Button -->
+  <button class="exit-button" onclick="goToServicePage()">BACK</button>
+
+  <script>
+    function goToServicePage() {
+      window.location.href = 'classes.html';
+    }
+  </script>
+  
+</body>
+</html>

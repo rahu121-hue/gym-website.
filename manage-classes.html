@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Classes - My Fitness Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .edit-button {
+            background-color: #ffc107; /* Yellow for edit */
+        }
+        .edit-button:hover {
+            background-color: #e0a800;
+        }
+        .delete-button {
+            background-color: #dc3545; /* Red for delete */
+        }
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+        .add-class-container {
+            margin-bottom: 20px;
+        }
+        .input-field {
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function editClass(id) {
+            // Simulate editing a class (you would implement actual logic here)
+            alert("Edit class with ID: " + id);
+        }
+
+        function deleteClass(id) {
+            if (confirm("Are you sure you want to delete class with ID: " + id + "?")) {
+                alert("Class with ID: " + id + " deleted.");
+                // Code to remove the class from the table goes here
+            }
+        }
+
+        function addClass() {
+            const className = document.getElementById("class-name").value;
+            const classTime = document.getElementById("class-time").value;
+            if (className && classTime) {
+                alert("Class '" + className + "' at '" + classTime + "' added.");
+                // Code to add the class goes here
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Manage Classes</h1>
+    </div>
+    <div class="container">
+        <div class="add-class-container">
+            <h2>Add New Class</h2>
+            <input type="text" id="class-name" class="input-field" placeholder="Class Name" required>
+            <input type="text" id="class-time" class="input-field" placeholder="Class Time" required>
+            <button class="button" onclick="addClass()">Add Class</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Class Name</th>
+                    <th>Class Time</th>
+                    <th>Participants</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>STRETECTING CLASS</td>
+                    <td>10:00 AM</td>
+                    <td><button class="button" onclick="alert('View participants for class ID: 1')">View Participants</button></td>
+                    <td>
+                        <button class="button edit-button" onclick="editClass(1)">Edit</button>
+                        <button class="button delete-button" onclick="deleteClass(1)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Strength Training Class</td>
+                    <td>11:30 AM</td>
+                    <td><button class="button" onclick="alert('View participants for class ID: 2')">View Participants</button></td>
+                    <td>
+                        <button class="button edit-button" onclick="editClass(2)">Edit</button>
+                        <button class="button delete-button" onclick="deleteClass(2)">Delete</button>
+                    </td>
+                </tr>
+            
+                        <button class="button edit-button" onclick="editClass(3)">Edit</button>
+                        <button class="button delete-button" onclick="deleteClass(3)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

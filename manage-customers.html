@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers - My Fitness Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .edit-button {
+            background-color: #ffc107; /* Yellow for edit */
+        }
+        .edit-button:hover {
+            background-color: #e0a800;
+        }
+        .delete-button {
+            background-color: #dc3545; /* Red for delete */
+        }
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <script>
+        function editCustomer(id) {
+            // Simulate editing a customer (you would implement actual logic here)
+            alert("Edit customer with ID: " + id);
+        }
+
+        function deleteCustomer(id) {
+            // Simulate deleting a customer (you would implement actual logic here)
+            if (confirm("Are you sure you want to delete customer with ID: " + id + "?")) {
+                alert("Customer with ID: " + id + " deleted.");
+                // Code to remove the customer from the table goes here
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Manage Customers</h1>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>SHWETA ASWARMOL</td>
+                    <td>shweta@gmail.com</td>
+                    <td>
+                        <button class="button edit-button" onclick="editCustomer(1)">Edit</button>
+                        <button class="button delete-button" onclick="deleteCustomer(1)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>RAVI PRASAD</td>
+                    <td>raviprasad@Email.com</td>
+                    <td>
+                        <button class="button edit-button" onclick="editCustomer(2)">Edit</button>
+                        <button class="button delete-button" onclick="deleteCustomer(2)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>RIYA SINGH</td>
+                    <td>riya@email.com</td>
+                    <td>
+                        <button class="button edit-button" onclick="editCustomer(3)">Edit</button>
+                        <button class="button delete-button" onclick="deleteCustomer(3)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button" onclick="alert('Add new customer functionality not implemented yet.')">Add New Customer</button>
+    </div>
+
+</body>
+</html>

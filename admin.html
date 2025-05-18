@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - My Fitness Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #090909;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color:
+            background-color:#0d0d0d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0d0d0d;
+        }
+        .header {
+            background:#0d0d0d;;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .dashboard-container {
+            display: none; /* Hide dashboard by default */
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .button-link {
+            padding: 10px 15px;
+            background-color: #0d0d0d;
+            color: rgb(238, 230, 230);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button-link:hover {
+            background-color: #0d0d0d;
+        }
+    </style>
+    <script>
+        function showDashboard() {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('dashboard-container').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <div id="login-container" class="container">
+        <h2>Admin Login</h2>
+        <form onsubmit="showDashboard(); return false;"> <!-- Prevent default form submission -->
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="dashboard-container" class="dashboard-container">
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="card">
+            <h2>Manage Customers</h2>
+            <p><a href="manage-customers.html" class="button-link">View Customers</a></p>
+        </div>
+        <div class="card">
+            <h2>New Registrations</h2>
+            <p><a href="new-registrations.html" class="button-link">View Registrations</a></p>
+        </div>
+        <div class="card">
+            <h2>Manage Payments</h2>
+            <p><a href="manage-payments.html" class="button-link">View Payments</a></p>
+        </div>
+        <div class="card">
+            <h2>Manage Classes</h2>
+            <p><a href="manage-classes.html" class="button-link">View Classes</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
